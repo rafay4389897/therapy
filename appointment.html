@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img id="pic" src="./img/logo5-removebg-preview.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./appointment.html">Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./contact_us.html">Contact-us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Product
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./oil.html">Oil</a></li>
+                  <li><a class="dropdown-item e" href="./lotion.html">Lotion</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item " href="./Machine.html">Machines Equipment</a></li>
+                </ul>
+              </li>
+            </ul>        
+              <button class="btn btn-primary" type="submit"><a id="ancher" href="./appointment.html">APPOINTMENT </a></button>
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="container mt-3  appointment">
+   <form action="" method="post">
+    <h1 class="heading"> APPOINTMENT</h1>
+    <form action="" method="post">
+    <!-- 1st row start  -->
+    <div class="row ">
+    <div class="col-lg-6">
+        <select class="form-select bg-light border-0" style="height: 55px;" required="">
+            <option selected="">Select A Service</option>
+            <option value="1">Free</option>
+            <option value="2">VIP</option>
+            <option value="3">SVIP</option>
+        </select>
+       </div>
+   
+       <div class="col-lg-6">
+            <!-- <label for="" class="form-label">NAME</label> -->
+            <select class="form-select bg-light border-0" style="height: 55px;" required="">
+                <option selected="">Select Doctor</option>
+                <option value="1">DR.Selman Dogan</option>
+                <option value="2"> DR.Yunus Uysal</option>
+                <option value="3">Dr. Ahmed Elhelaly</option>
+            </select>
+            </div>
+    
+    </div>
+   <!-- 1st row end -->
+
+   
+      <!-- 2nd row start  -->
+     <div class="row">  
+    <div class="col-lg-6">
+    
+        <input type="text" class="form-control  top bg-ligbht order-0" placeholder="Your Name" style="height: 55px;" required="">
+    </div>
+
+<div class="col-lg-6">
+    <input type="email" class="form-control top bg-light border-0" placeholder="Your Email" style="height: 55px;" required="">
+
+</div>
+
+    </div>   
+    <!-- 2nd row end -->
+
+   
+                <!-- 3rd row start -->
+
+        <div class="row">
+        <div class="col-lg-6">
+            <div class="date" id="date1" data-target-input="nearest">
+           <input type="text" class="form-control top bg-light border-0 datetimepicker-input" placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;" required="">
+            </div>
+    
+           </div>
+    
+        <div class="col-lg-6">
+        <div class="time" id="time1" data-target-input="nearest">
+            <input type="text" class="form-control top bg-light border-0 datetimepicker-input" placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;" required="">
+        </div>
+    
+       </div>
+
+         <div>
+         <button class="btn button btn-info w-100 py-3" type="submit">Make Appointment</button>
+         </div>
+            
+       </div>
+
+      
+        </div>
+<!-- 
+        <div>
+         <button class="btn button btn-info w-100 py-3" type="submit">Make Appointment</button>
+        </div> -->
+            
+    
+      
+    
+
+    
+
+    
+
+      
+       
+    <!-- 3rd row end -->
+       
+
+
+   <!-- // start footer -->
+
+
+   <div class="footer-top">
+    <div class="container-fluid mt-3 foot">
+   <div class="row">
+   <div class="col-lg-3">
+  <h4 class="foot_head" style="color:#ffffff ;" >Useful link</h4>
+  <ul>
+    <li class="line"><i class="bx bx-chevron-right"></i> <a href="./service.html">Services</a></li>
+    <li class="line"><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact-us</a></li>
+    <li class="line"><i class="bx bx-chevron-right"></i> <a href="./appointment.html">Appointment</a></li>
+    </ul>
+     </div>
+
+     <div class="col-lg-3">
+    <h4 class="foot_head" style="color:#ffffff ; display: flex; margin-left: 25px; ">Our Services</h4>
+     <ul>
+    <li class="line"><i class="bx bx-chevron-right"></i> <a href="./service.html">Interpersonal therapy</a></li>
+    <li class="line"><i class="bx bx-chevron-right"></i> <a href="./service.html">Exposure therapyn</a></li>
+    <li class="line"><i class="bx bx-chevron-right"></i> <a href="./service.html">Group therapy</a></li>
+    </ul>
+   </div>
+
+     <div class="col-lg-3">
+    <h4 class="foot_head" style="color:#ffffff ; ">Contact-Us</h4>
+      <p style="color:#ffffff ;">
+        A108 Adam Street <br>
+        Pakistan, NY 535022<br>
+        Hyderabad <br><br>
+        <strong>Phone:</strong> +1 5589 55488 55<br>
+        <strong>Email:</strong> info@Zara.com<br>
+      </p>
+
+   </div>
+
+     <div class="col-lg-3">
+    <h3 class="foot_head" style="color:#ffffff ;">About Zara</h3>
+    <p class="line">Is to provide therapy at the highest standard of quality in private room one-on-one care,
+        with practices
+        in a comfortable and professional environment, and ensure that our healthcare solutions meet
+        your
+        individual needs.
+       </p>
+      </div>
+
+     
+     </div>
+     </div>
+     </div> 
+          <!-- footer end -->
+
+    
+    
+
+   
+   
+    
+
+
+
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

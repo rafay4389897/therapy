@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>WoW.com</title>
+</head>
+<style>
+  
+   *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: Bookman Old Style;;
+      
+     }
+     
+      
+     
+     .nav-link{
+            margin-left: 100px;
+            color:rgb(0, 0, 0);
+            
+
+       }
+       .nav-link:hover{
+        color: goldenrod;
+       }
+        
+     
+     .about{
+      overflow: hidden;
+      background-color: #f8f8f8;
+     }
+     .heading1{
+       color: #ff6347;
+       font-size: 50px;
+       text-align: center;
+       margin-top: 35px;
+     }
+     #set{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 90%;
+      margin: 65px;
+      
+     }
+     .content-section {
+      flex: 1;
+      width:600px;
+      margin: 25px;
+      
+     }
+     .content-section h2{
+      font-size: 38px;
+      margin-bottom:20px ;
+      color:   #24262b;
+      
+     }
+     .content-section .para{
+      font-size: 20px;
+      line-height:1.5 ;
+      margin-bottom: 40px;
+      color: black;
+     }
+     .content-section .btn{
+      display: inline-block;
+      background-color: #ff4500;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      transition: 0.5;
+      
+     }
+     .content-section .btn:hover{
+      background-color: #ff6347;
+      transform: scale(1.1);
+     }
+     .image1{
+      flex: 1;
+      width: 600px;
+      margin: auto;
+     }
+     #logo{
+      width: 400px;
+      height: auto;
+      
+     }
+     @media screen and(max-width:768){
+      .heading h1{
+        font-size: 45px;
+        margin-top: 30px;
+      }
+      .about{
+         margin: 0px;
+      }
+      .container{
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+      }
+      .content-section{
+        width: 100%;
+        margin: 35px 0px;
+
+      }
+      .content-section h2{
+        font-size: 30px;
+      }
+      .content-section .para{
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+      .content-section .btn{
+        font-size: 16px;
+        padding:8px 16px;
+      }
+      .image1{
+        width: 100%;
+      }
+     }
+     .item{
+           max-width: 1170px;
+           background-color: red;
+           margin-top: auto;
+      }
+      ul{
+        list-style: none;
+      }
+      .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+        margin-top: 50px;
+      }
+      .footer-col{
+        width: 25%;
+        padding: 0 15px;
+      }
+      .footer-col h4{
+        font-size: 18px;
+        color: white;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+        margin-left: 20px;
+      }
+      .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+      }
+      .footer-col ul li:not(:last-child){
+          margin-bottom: 10px;
+      }
+      .footer-col ul li a{
+        font-size: 16px;
+        text-transform:capitalize;
+        color: white;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3 ease;
+      }
+      .footer-col ul li a:hover{
+        color: white;
+        padding: 3px;
+      }
+      .footer-col .socail-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgb(255, 255, 255 , 0.2);
+        margin:0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transform: all 0.5s ease;
+      }
+      .footer-col .socail-links a:hover{
+        color: #24262b;
+        background-color: #ffffff;
+      }
+      @media(max-width: 767px){
+        .footer-col{
+          width: 25%;
+          margin-bottom: 30px;
+        }
+      }
+      @media(max-width: 574px){
+        .footer-col{
+          width: 100%;
+         
+        }
+      }
+    
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="images\Capture.PNG2.PNG" width="180px" height="70px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About us</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href="bookyourself.html" id="navbarDropdown" role="button">
+                Book Yourself
+                </a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactus.html" tabindex="-1" aria-disabled="false">Contact us</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+
+      <section class="about">
+        <div class="heading1">
+          <h1>ABOUT US</h1>
+        </div>
+        <div class="container" id="set">
+          <div class="content-section">
+            <h2>WELCOME!!</h2>
+            <p class="para">Explore the beauty of world with us , nothing is better than taking a break from daily life and find yourself in the beauty of world, book yourself for a classical trip to wonders of world and witness the beauty of world with naked eyes we provide economical pakages to you to explore the great monuments of world made my people during ancient time book yourself today to feel the most amazing man made monuments . </p>
+            <button class="btn">Learn More</button>
+          </div>
+          <div class="image1">
+            <img src="images/7-maravillas.jpg" id="logo">
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container" id="item">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="bookyourself.html">Book yourself</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>7 Wonders</h4>
+              <ul>
+                <li><a href="colosseum.html">Colosseum</a></li>
+                <li><a href="tajmahal.html">Taj Mahal</a></li>
+                <li><a href="pyramid.html">Great pyramid of giza</a></li>
+                <li><a href="machu-picchu.html">Machu-Picchu</a></li>
+                <li><a href="wallofchina.html">The great wall of china</a></li>
+                <li><a href="christredeemer.html">Christ the redeemer</a></li>
+                <li><a href="chichenitza.html">Chichen itza</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="socail-links">
+                <a href=""><i class="ri-facebook-box-fill"></i></a>
+                <a href=""><i class="ri-instagram-line"></i></a>
+                <a href=""><i class="ri-twitter-fill"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+     
+   <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+   <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

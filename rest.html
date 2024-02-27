@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Luckiest+Guy&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Luckiest+Guy&display=swap"
+    rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+         * {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Caveat', cursive;
+      box-sizing: border-box;
+    }
+    body{
+       background-color: #FFFFC2;
+    }
+        .video{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .content{
+            text-align: center;
+        }
+        .content h1{
+            color: #fff;
+            transition: 0.5s;
+        }
+        .content h1:hover{
+            -webkit-text-stroke: 2px #fff;
+            color: transparent;
+        }
+        .content a{
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            border: 2px solid #fff;
+            padding: 14px 40px;
+            border-radius: 50px;
+            margin-top: 20px;
+            color: #fff;
+        }
+        .back-video{
+          min-width: 100%;
+          width: auto;
+          min-height: 100vh;
+          height: auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            object-fit: cover;
+            object-position: center;
+        }
+        @media (min-aspect-ratio: 16/9){
+            .back-video{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio: 16/9){
+            .back-video{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .text {
+      background: linear-gradient(red, purple, orange, blue);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 60px;
+      text-align: center;
+    }
+
+    .nav-item {
+      font-size: 25px;
+      padding: 30px;
+
+    }
+
+    .nav-item:hover {
+      font-size: 26px;
+      text-shadow: 3px 4px 19px rgba(1, 2, 1, 0.6);
+    }
+
+    .navbar {
+      background-color: #FFBF00;
+      border: 5px solid #5B3256;
+      border-radius: 2px;
+    }
+
+        .card-img-top{
+    border-radius: 50px;
+    padding: 20px;
+    height: 300px;
+  }
+  .card{
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  }
+  .card-body{
+    padding: 25px;
+    margin-top: -15px;
+  }
+  .btn-primary{
+    border-radius: 50px;
+    width: 120px;
+  }
+  .btn-primary:hover{
+    background-color: #FFBF00;
+  }
+  .card-title{
+    color: #5B3256;
+    font-size: 30px;
+    border-bottom: 2px solid #FFBF00;
+  }
+  h5{
+    color: #5B3256;
+  }
+  .pe7 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .he7 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 27px;
+    color: #000;
+  }
+  #ticketSection {
+            display: none;
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: absolute;
+            top: 56px; /* Adjust this value based on your navbar's height */
+            right: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        @media (min-width: 992px) {
+            #ticketSection {
+                top: 160px; /* Adjust this value based on your navbar's height */
+            }
+        }
+        #ticketSection{
+            background-color: #FFBF00;
+        }
+        .submit{
+            padding: 8px 8px;
+            border-radius: 10px;
+            margin: 5px 15px;
+            width: 80px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            background-color: #FFBF00;
+        }
+        label{
+            width: 100px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text">MERCIADO AMUSEMENT PARK</h1>
+    <navbar>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"><img src="pics/LOGO.JPG.png" style="width: 150px; height: 100px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"> 
+                <a class="nav-link active" aria-current="page" href="about us new.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact us new.html">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="disclaimer.html">Disclamer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="bookTicketBtn" href="#">Book your ticket</a>
+              </li>
+              <div id="ticketSection">
+                  <form id="ticketForm">
+                      <!-- Your form fields go here -->
+                      <label for="fullName">Full Name:</label>
+                      <input type="text" id="fullName" name="fullName" placeholder="Your Full Name">
+          
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" placeholder="Your Email">
+                      <label for="email">Password:</label>
+                      <input type="email" id="email" name="email" placeholder="Your password">
+          
+                      <label for="ticketType">Ticket Type:</label>
+                      <select id="ticketType" name="ticketType">
+                          <option value="adult">Adult</option>
+                          <option value="child">Child</option>
+                      </select>
+          
+                      <button class="submit" type="submit"><b>Submit</b></button>
+                  </form>
+              </div>
+              <script>
+                
+          $(document).ready(function(){
+              $("#bookTicketBtn").click(function(e){
+                  e.preventDefault(); // Prevent the default behavior of the anchor link
+                  $("#ticketSection").slideToggle();
+              });
+          });
+              </script>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Galary section
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Entertainment new.html">Entertainments</a></li>
+                  <li><a class="dropdown-item" href="rest.html">Restaurants</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="ticket.html">Tickets and prices</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </navbar>
+
+
+
+
+    <div class="col col-lg-6 col-md-12 col-sm-12 col-12 align-items-center justify-content-center d-flex video">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="pics/food_-_24999 (1080p).mp4" type="video/mp4">
+        </video>
+      <div class="content">
+        <h1 class="display-1">RESTAURANT</h1>
+        <a href="#">Explore</a>
+      </div>
+    </div>
+   
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+          <div class="col">
+            <div class="card" >
+              <img src="pics/chicken fry.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Full chicken fried</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, rem reiciendis sed velit id debitis illum explicabo temporibus magnam? Eum quia totam temporibus a quibusdam consequatur cupiditate fugiat tempora debitis?</p>
+              </div>
+              <div class="d-flex justify-content-around mb-3">
+               
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col">
+            <div class="card" >
+              <img src="pics/corn dog.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Chicken crispy sticks</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, rem reiciendis sed velit id debitis illum explicabo temporibus magnam? Eum quia totam temporibus a quibusdam consequatur cupiditate fugiat tempora debitis?</p>
+              </div>
+              <div class="d-flex justify-content-around mb-3">
+               
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col">
+            <div class="card" >
+              <img src="pics/choclate.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Chocolate cup</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, rem reiciendis sed velit id debitis illum explicabo temporibus magnam? Eum quia totam temporibus a quibusdam consequatur cupiditate fugiat tempora debitis?</p>
+              </div>
+              <div class="d-flex justify-content-around mb-3">
+                
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+              <div class="col">
+                <div class="card" >
+                  <img src="pics/spaghetti.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Spaghetti bolognese</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, rem reiciendis sed velit id debitis illum explicabo temporibus magnam? Eum quia totam temporibus a quibusdam consequatur cupiditate fugiat tempora debitis?</p>
+                  </div>
+                  <div class="d-flex justify-content-around mb-3">
+                   
+                    <button class="btn btn-primary">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="card" >
+                  <img src="pics/kabab.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Steak kabab</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, rem reiciendis sed velit id debitis illum explicabo temporibus magnam? Eum quia totam temporibus a quibusdam consequatur cupiditate fugiat tempora debitis?</p>
+                  </div>
+                  <div class="d-flex justify-content-around mb-3">
+                   
+                    <button class="btn btn-primary">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="card" >
+                  <img src="pics/shawarma.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken sharwama roll</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, rem reiciendis sed velit id debitis illum explicabo temporibus magnam? Eum quia totam temporibus a quibusdam consequatur cupiditate fugiat tempora debitis?</p>
+                  </div>
+                  <div class="d-flex justify-content-around mb-3">
+                    
+                    <button class="btn btn-primary">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- ##########################footer##################################### -->
+
+<div class="container-fluid p-0 my-5">
+
+  <footer class="text-black text-center text-lg-start" style="background-color:#FFBF00;">
+
+    <div class="container p-4">
+
+      <div class="row mt-4">
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 he7">Merciado Amusment Park</h5>
+
+          <p class="pe7">
+            "Step into a world of wonder and excitement at Merciado Amusment Park. Our footer is more than just the
+            end
+            of the page – it's the gateway to endless fun and unforgettable memories. Connect with us on social media
+            to stay updated on the latest thrills, promotions, and events. Explore our other attractions, from
+            heart-pounding roller coasters to family-friendly rides, and plan your next adventure with ease using our
+            helpful links. Your journey doesn't end here; it's just beginning. Join us in creating moments that last a
+            lifetime at Merciado Amusment Park."</p>
+
+
+
+          <div class="mt-4">
+
+            <a type="button" class="btn btn-floating  btn-lg"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+
+            <a type="button" class="btn btn-floating  btn-lg"><i class="fa-brands fa-square-x-twitter fa-2xl"></i></a>
+
+            <a type="button" class="btn btn-floating  btn-lg"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+
+            <a type="button" class="btn btn-floating  btn-lg"><i class="fa-brands fa-square-google-plus fa-2xl"></i></a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1 he7">Search something</h5>
+
+          <div class="form-outline form-white mb-4">
+            <input type="text" id="formControlLg" class="form-control form-control-lg">
+            <label class="form-label" for="formControlLg" style="margin-left: 0px;"></label>
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px;"></div>
+              <div class="form-notch-middle" style="width: 48.8px;"></div>
+              <div class="form-notch-trailing"></div>
+            </div>
+          </div>
+
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home "></i></span><span class="ms-2 pe7">City Of perris, 925 S D
+                St</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                class="ms-2 pe7">ahsanmir912@gmail.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2 pe7">+92 344 360 1923</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2 pe7">+92 344 360 1923</span>
+            </li>
+
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 he7">Opening hours</h5>
+
+          <table class="table text-center text-black pe7">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>Mon - Thu:</td>
+                <td>8am - 9pm</td>
+              </tr>
+              <tr>
+                <td>Fri - Sat:</td>
+                <td>8am - 12am</td>
+              </tr>
+              <tr>
+                <td>Sunday:</td>
+                <td>8am - 1am</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+    
+
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Copyright:
+      <a class="text-white" href="#">Merciado Amusement Park</a>
+    </div>
+
+  </footer>
+
+</div>
+
+
+
+    
+
+
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+</body>
+</html>

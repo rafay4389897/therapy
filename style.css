@@ -1,0 +1,335 @@
+ *{
+  margin: 0;
+  padding: 0;
+
+
+ }
+#pic{
+    width:160px;
+    height: 90px;
+
+   
+    
+}
+.nav-item{
+padding: 20px;
+
+
+}
+.nav-link{
+         
+         /* margin: 5px; */
+         /* margin: 2px; */
+         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         /* font-weight: 500; */
+         
+         font-size:17px;
+         margin-left: 10px;
+         transition: all;
+         transition-duration: 1s;
+         letter-spacing: 1px;
+         margin-top: 20px;
+         
+}
+
+
+.nav-link:hover{
+font-size: 20px;
+color: #0463FA;
+
+}
+
+.heed{
+     font-family: Sitka Subheading;
+     /* background-color: aqua; */
+      /* color: 	#ffffff; */
+      color: #0463FA;
+       font-weight: bold;
+   
+
+}
+
+.text{
+      font-family: Sitka Subheading ;
+      /* color: #0463FA; */
+      color: #ffffff;
+      font-weight: bold;
+  
+}
+
+
+#ancher{
+
+        text-decoration: none;
+        color: #ffffff;
+        font-family: Sitka Subheading ;
+        font-weight: bold;
+        padding: 5px;
+        margin: 2px;
+
+}
+.navbar{
+       /* background-color: #ECF3F2; */
+}
+#inf{
+     text-align: center;
+     font-family: Sitka Subheading ;
+     /* color: #000000; */
+     font-weight: bold;
+     color: #0463FA;
+ 
+}
+.box{
+    /* border: 10px solid rgba(255,255,255,.5); */
+    border: 1px solid transparent;
+    margin-top: 10px;
+    
+}
+
+.para{
+    font-family: Sitka Subheading ;
+    color: #000000;
+    text-align: justify;
+   
+
+}
+.li{
+    font-family: Sitka Subheading ;
+    color: #000000;
+   
+
+
+
+}
+/* #inf ,.li{
+    animation-name: txt;
+    animation-duration: 4s;
+
+} */
+@keyframes txt {
+    0%{
+        font-size: 16px;
+    }
+    50%{
+        font-size: 12px;
+    }
+}
+
+#mores{
+      border: 1px solid black;
+      color: #0463FA ;
+    
+
+    }
+    #mores:hover{
+      background-color:#ffffff;
+    }
+
+  /* appointment styling */
+
+.top{
+    margin-top: 10px;
+    font-family:Sitka Subheading ;
+    color: #000000;
+}
+.appointment{
+         background-color: #006FB4;
+      
+         
+       
+}
+.heading{
+       font-family: Sitka Subheading ;
+       text-align: center;
+       font-weight: bold;
+       color: #ffffff;
+}
+.button{
+        margin-top: 8px;
+        color:#0463FA;
+        font-family: Sitka Subheading  ;
+        font-weight:bolder;
+        border-radius: 1px solid black;
+
+}
+.form-select{
+            font-family: Sitka Subheading ;
+            color: #000000;
+
+}
+ 
+.form-label{
+         font-family: Sitka Subheading ;
+         font-weight:bold;
+         padding: 4px;
+}
+.form-control{
+    font-family: Sitka Subheading ;
+    text-align:justify;
+
+
+}
+
+#cont{
+    font-family: Sitka Subheading ;
+    text-align: center;
+    font-weight: bold;
+    color: #0463FA;
+    padding: 10px;
+}
+  /* footer styling */
+
+  .foot{
+        background-color: #3498db;
+        padding: 20px;
+  }
+  a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+  
+  }
+  .line{
+      list-style-type: none;
+      color: #ffffff;
+
+      font-family: Sitka Subheading ;
+
+  }
+ 
+
+.foot_head{
+        font-family:Sitka Subheading  ;
+        font-weight: bold;
+       
+}
+
+/* ///foter */
+.just-li{
+         list-style-type: none;
+         padding: 4px;
+         color: #000000;
+         font-family: Sitka Subheading ;
+         
+}
+
+
+
+
+  
+
+.jus{
+      list-style-type: none;
+      padding: 6px;
+      font-family:Sitka Subheading ;
+      color: #000000;
+      
+}
+
+/* card designing */
+
+.heading1{
+    font-family: Sitka Subheading;
+    font-weight: bold;
+   text-align: center;
+    animation-name: txt;
+   animation-duration: 4s;
+   color:#0463FA
+   
+}
+.card-title{
+       font-family: Sitka Subheading;
+       font-weight: bold;
+       border-top: 1px solid black;
+       animation-name: txt;
+       animation-duration: 4s;
+       color:  #0463FA;
+       
+}
+@keyframes txt{
+0%{
+font-size: 16px;
+}
+50%{
+font-size: 12px;
+}
+}
+.card-text{
+       font-family: Sitka Subheading;
+       border-top: 1px solid black;
+     
+}
+.card-body{
+     background-color: #FDF4F8;
+
+}
+.card-img-top{
+        border-radius: 4px solid black;
+}
+.card-info{  
+     
+}
+.carf-box{
+   
+   padding: 5px;
+}
+.card-img-top:hover{
+transition: 0.6s;
+transform: scale(1.2);
+transition-timing-function: ease-in-out;
+
+}
+
+
+.img-pics:hover{
+                transition: 0.6s;
+                transform: scale(1.2);
+                transition-timing-function: ease-in-out;
+
+     
+}
+
+/* /////lotion styling */
+
+.card-text-lotion{
+    border-top: 1px solid;
+    font-family: Sitka Subheading;
+    animation-name: txt;
+    animation-duration: 4s;
+
+
+}
+.card-img-top-lotion:hover{
+transition: 0.6s;
+transform: scale(1.2);
+transition-timing-function: ease-in-out;
+}
+#text-lotion{
+font-family:Sitka Subheading ;
+animation-name: txt;
+animation-duration: 4s;
+text-align: justify;
+
+}
+
+    /* //machine page */
+
+    .text-machine{
+        font-family: Sitka Subheading;
+        text-align: justify;
+        animation-name: txt;
+        animation-duration: 4s;
+        font-weight: bold;
+  }
+.img-machine:hover{
+        transition: 0.6s;
+        transform: scale(1.2);
+        transition-timing-function: ease-in-out;
+    
+}
+.dropdown-item{
+              font-family: Sitka Subheading ;
+              text-align: justify;
+              color: #000000;
+             
+}

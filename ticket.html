@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Luckiest+Guy&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Luckiest+Guy&display=swap"
+    rel="stylesheet">
+
+  <script src="jquery-3.7.1.min.js"></script>
+  <style>
+    * {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Caveat', cursive;
+    box-sizing: border-box;
+  }
+  body{
+     background-color: #FFFFC2;
+  }
+  .text {
+    background: linear-gradient(red, purple, orange, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .nav-item {
+    font-size: 25px;
+    padding: 30px;
+
+  }
+
+  .nav-item:hover {
+    font-size: 26px;
+    text-shadow: 3px 4px 19px rgba(1, 2, 1, 0.6);
+  }
+
+  .navbar {
+    background-color: #FFBF00;
+    border: 5px solid #5B3256;
+    border-radius: 2px;
+  }
+  .pricing-table{
+    /* background: #f8f8f8; */
+    padding: 40px 0px;
+  }
+  .pricing-table .grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 0px;
+    padding: 20px;
+  }
+  .pricing-table .grid .box{
+    width: 350px;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 20px;
+    background: #fff; 
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
+  }
+  .pricing-table .grid .box .title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+     color: #000; 
+  }
+  .pricing-table .grid .box .price{
+    margin-bottom: 20px;
+  }
+  .pricing-table .grid .box .price b{
+    display: block;
+    font-size: 40px;
+    margin-bottom: -5px;
+  }
+  .pricing-table .grid .box .features > * {
+   color: #000;
+   padding: 8px 0px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .pricing-table .grid .box .button button {
+    width: 100%;
+    margin: 25px 0px 0px;
+    padding: 10px;
+    background: #5B3256;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  .pricing-table .grid .box.professional {
+    transform: scale(1.1);
+    background: #5B3256;
+    
+  }
+  .pricing-table .grid .box.professional .title{
+    color: #000;
+    font-size: 30px;
+  }
+  .pricing-table .grid .box.professional .price{
+    color: #000;
+   
+  }
+  .pricing-table .grid .box.professional .features . * {
+    color: #fff;
+    border-bottom: 1px solid rgba(225,225,225,0.5);
+   
+  }
+  .pricing-table .grid .box.professional .button button{
+    background: #fff;
+    color: #000;
+  }
+  @media (max-width:804px){
+    .pricing-table .grid {
+      gap: 20px;
+    }
+    .pricing-table .grid .box.professional{
+      transform: scale(1);
+    }
+  }
+
+      
+      
+  
+
+  .pe7 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.he7 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 27px;
+
+}
+#ticketSection {
+          display: none;
+          background-color: #f0f0f0;
+          padding: 20px;
+          position: absolute;
+          top: 56px; /* Adjust this value based on your navbar's height */
+          right: 0;
+          left: 0;
+          z-index: 1000;
+      }
+      @media (min-width: 992px) {
+          #ticketSection {
+              top: 160px; /* Adjust this value based on your navbar's height */
+          }
+      }
+      #ticketSection{
+          background-color: #FFBF00;
+      }
+      .submit{
+          padding: 8px 8px;
+          border-radius: 10px;
+          margin: 5px 15px;
+          width: 80px;
+          letter-spacing: 1px;
+          font-size: 18px;
+          background-color: #FFBF00;
+      }
+      label{
+          width: 100px;
+          font-size: 18px;
+      }
+  </style>
+</head>
+
+<body>
+  <h1 class="text">MERCIADO AMUSEMENT PARK</h1>
+  <navbar>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"><img src="pics/LOGO.JPG.png"
+            style="width: 150px; height: 100px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about us new.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./contact us new.html">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./disclamer.html">Disclamer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="bookTicketBtn" href="#">Book your ticket</a>
+            </li>
+            <div id="ticketSection">
+              <form id="ticketForm">
+                <!-- Your form fields go here -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your Full Name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                <label for="email">Password:</label>
+                <input type="email" id="email" name="email" placeholder="Your password">
+
+                <label for="ticketType">Ticket Type:</label>
+                <select id="ticketType" name="ticketType">
+                  <option value="adult">Adult</option>
+                  <option value="child">Child</option>
+                </select>
+                <button class="submit" type="submit"><b>Submit</b></button>
+              </form>
+            </div>
+            <script>
+
+              $(document).ready(function () {
+                $("#bookTicketBtn").click(function (e) {
+                  e.preventDefault(); // Prevent the default behavior of the anchor link
+                  $("#ticketSection").slideToggle();
+                });
+              });
+            </script>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Galary section
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Entertainment new.html">Entertainments</a></li>
+                <li><a class="dropdown-item" href="rest.html">Restaurants</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./tickets.html">Tickets and prices</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </navbar>
+  <h1 class="text" style="padding: 25px; font-size: 70px;">BOOK YOUR TICKETS</h1>
+ <div class="pricing-table">
+ <div class="grid">
+  <div class="box basic">
+    <div class="title">Per Day</div>
+    <div class="price">
+      <b>$24.99</b>
+      <span>Package 1</span>
+    </div>
+    <div class="features">
+      <div>Members : ____</div>
+      <div>Zone : _____</div>
+      <div>Seats : ____</div>
+      <div>Pass number : ___</div>
+    </div>
+    <div class="button">
+      <button>Buy Now</button>
+    </div>
+  </div>
+  <div class="box professional">
+    <div class="title">Weekend</div>
+    <div class="price">
+      <b>$49.99</b>
+      <span>Package 2</span>
+    </div>
+    <div class="features">
+      <div>Members : ____</div>
+      <div>Zone : _____</div>
+      <div>Seats : ____</div>
+      <div>Pass number : ___</div>
+    </div>
+    <div class="button">
+      <button>Buy Now</button>
+    </div>
+  </div>
+  <div class="box ninja">
+    <div class="title">Party</div>
+    <div class="price">
+      <b>$99.99</b>
+      <span>Package 3</span>
+    </div>
+    <div class="features">
+      <div>Members : ____</div>
+      <div>Zone : _____</div>
+      <div>Seats : ____</div>
+      <div>Pass number : ___</div>
+    </div>
+    <div class="button">
+      <button>Buy Now</button>
+    </div>
+  </div>
+ </div>
+ </div>
+  
+  <!-- ##########################footer##################################### -->
+
+  <div class="container-fluid p-0 my-5">
+
+    <footer class="text-black text-center text-lg-start" style="background-color:#FFBF00;">
+
+      <div class="container p-4">
+
+        <div class="row mt-4">
+
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4 he7">Merciado Amusment Park</h5>
+
+            <p class="pe7">
+              "Step into a world of wonder and excitement at Merciado Amusment Park. Our footer is more than just the
+              end
+              of the page – it's the gateway to endless fun and unforgettable memories. Connect with us on social media
+              to stay updated on the latest thrills, promotions, and events. Explore our other attractions, from
+              heart-pounding roller coasters to family-friendly rides, and plan your next adventure with ease using our
+              helpful links. Your journey doesn't end here; it's just beginning. Join us in creating moments that last a
+              lifetime at Merciado Amusment Park."</p>
+            <div class="mt-4">
+              <a type="button" class="btn btn-floating  btn-lg"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+
+              <a type="button" class="btn btn-floating  btn-lg"><i class="fa-brands fa-square-x-twitter fa-2xl"></i></a>
+
+              <a type="button" class="btn btn-floating  btn-lg"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+
+              <a type="button" class="btn btn-floating  btn-lg"><i
+                  class="fa-brands fa-square-google-plus fa-2xl"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4 pb-1 he7">Search something</h5>
+
+            <div class="form-outline form-white mb-4">
+              <input type="text" id="formControlLg" class="form-control form-control-lg">
+              <label class="form-label" for="formControlLg" style="margin-left: 0px;"></label>
+              <div class="form-notch">
+                <div class="form-notch-leading" style="width: 9px;"></div>
+                <div class="form-notch-middle" style="width: 48.8px;"></div>
+                <div class="form-notch-trailing"></div>
+              </div>
+            </div>
+            <ul class="fa-ul" style="margin-left: 1.65em;">
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-home "></i></span><span class="ms-2 pe7">City Of perris, 925 S D
+                  St</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                  class="ms-2 pe7">ahsanmir912@gmail.com</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2 pe7">+92 344 360 1923</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2 pe7">+92 344 360 1923</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4 he7">Opening hours</h5>
+
+            <table class="table text-center text-black pe7">
+              <tbody class="font-weight-normal">
+                <tr>
+                  <td>Mon - Thu:</td>
+                  <td>8am - 9pm</td>
+                </tr>
+                <tr>
+                  <td>Fri - Sat:</td>
+                  <td>8am - 12am</td>
+                </tr>
+                <tr>
+                  <td>Sunday:</td>
+                  <td>8am - 1am</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-white" href="#">Merciado Amusement Park</a>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+  <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+</body>
+
+</htm

@@ -1,0 +1,183 @@
+
+
+.nav-link:hover {
+  color: #88c3e7;
+  transition: all;
+  transition: 0.5s;
+}
+
+.navbar-brand {
+  color: #2157A5;
+
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+.nav-item {
+  color: #2157A5;
+}
+
+.nav-link {
+  color: #2157A5;
+
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: inline-block;
+}
+
+.dropdown-item {
+  color: #2157A5;
+}
+
+.dropdown-item:hover {
+  color: #88c3e7;
+
+}
+/* .schedule-dropdown:hover .dropdown-menu {
+  display: block;
+} */
+
+.card1:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+
+
+}
+
+.card1 {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.card1:hover .btn-card {
+  opacity: 1;
+}
+
+
+.btn-card {
+
+
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2157A5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+}
+
+.btn-card:hover {
+  color: white;
+  transition: all;
+  transition: 0.5s;
+  background-color: #88c3e7;
+
+}
+
+.body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.section {
+  padding: 20px;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.text {
+  animation-name: txt;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: in; */
+
+}
+
+@keyframes txt {
+  10% {
+    font-size: 20px;
+  }
+
+  100% {
+    color: #2157A5;
+  }
+
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+
+  height: 500px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5%;  
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 5%;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 5%;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
